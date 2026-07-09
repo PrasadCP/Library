@@ -4,7 +4,7 @@ function AboutPage() {
       <p className="eyebrow">About the Library</p>
       <h2>Built for readers who love simplicity.</h2>
       <p>
-        Pathiyaar Library is a calm, static library website designed to
+        പതിയാർ ഗ്രന്ഥാലയം is a calm, static library website designed to
         highlight curated books, thoughtful categories, and an inviting browsing
         experience.
       </p>

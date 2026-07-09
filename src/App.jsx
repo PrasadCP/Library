@@ -29,7 +29,7 @@ function App() {
     <div className="app-shell">
       <header className="hero">
         <div className="hero-content">
-          <p className="eyebrow">Pathiyaar Library</p>
+          <p className="eyebrow">പതിയാർ ഗ്രന്ഥാലയം</p>
           <h1>Discover calm, knowledge, and stories in one place.</h1>
           <p className="hero-text">
             A peaceful digital library experience for readers who enjoy timeless
@@ -87,7 +87,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>© 2026 Pathiyaar Library. All rights reserved.</p>
+        <p>© 2026 പതിയാർ ഗ്രന്ഥാലയം. All rights reserved.</p>
       </footer>
     </div>
   );

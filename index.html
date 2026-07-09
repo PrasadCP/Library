@@ -7,11 +7,17 @@
       name="description"
       content="A modern static library website built with React"
     />
-    <title>Pathiyaar Library</title>
+    <title>പതിയാർ ഗ്രന്ഥാലയം</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         color-scheme: light;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Merriweather", Georgia, Times, "Times New Roman", serif;
         line-height: 1.5;
         font-weight: 400;
         color: #1f2937;
@@ -42,11 +48,38 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
-        padding: 16px 20px;
+        padding: 28px 28px;
+        border-radius: 14px;
+        color: #fff;
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+          url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1400&q=80");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
       }
       .nav-links {
         display: flex;
         gap: 10px;
+      }
+      .nav-brand strong {
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1;
+        display: inline-block;
+        margin-right: 12px;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+      }
+      .nav-title {
+        font-size: 1.8rem;
+        font-weight: 200;
+        color: #fff;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+      @media (max-width: 720px) {
+        .nav-title {
+          font-size: 1rem;
+        }
       }
       .nav-link {
         border: none;
@@ -60,11 +93,59 @@
         background: #1f3a2c;
         color: #fff;
       }
+      .section-card.event-banner,
+      .event-banner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        background: linear-gradient(135deg, #1f3a2c, #2d6a4f);
+        color: #fff;
+        border-radius: 22px;
+        padding: 24px 28px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+        margin-bottom: 20px;
+      }
+      .event-banner .event-badge {
+        background: rgba(255, 255, 255, 0.16);
+        color: #fff200;
+        letter-spacing: 0.22em;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 10px 16px;
+        border-radius: 999px;
+      }
+      .event-banner h2 {
+        margin: 0;
+        font-size: 1.9rem;
+        line-height: 1.1;
+      }
+      .event-banner p {
+        margin: 10px 0 0;
+        max-width: 760px;
+        color: rgba(255, 255, 255, 0.88);
+      }
+      .event-banner .event-note {
+        margin-top: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.95rem;
+      }
+      @media (max-width: 720px) {
+        .section-card.event-banner,
+        .event-banner {
+          flex-direction: column;
+          gap: 14px;
+        }
+        .event-banner h2 {
+          font-size: 1.4rem;
+        }
+      }
       .hero {
         background: #1f3a2c;
         color: #f9f5eb;
         border-radius: 24px;
-        padding: 56px 32px;
+        padding: 26px 32px;
         box-shadow: 0 20px 45px rgba(31, 58, 44, 0.2);
       }
       .hero h1 {
@@ -77,6 +158,11 @@
         font-size: 1.05rem;
         color: #dfe9df;
       }
+      .title-text {
+        max-width: 650px;
+        font-size: 1.5rem;
+        color: #fff200;
+      }
       .eyebrow {
         text-transform: uppercase;
         letter-spacing: 0.24em;
@@ -84,6 +170,10 @@
         font-weight: 700;
         color: #9bc2aa;
         margin-bottom: 8px;
+      }
+      .address p {
+        margin: 2px 0; /* Adjust as needed */
+        line-height: 1.2; /* Optional: reduce line height */
       }
       .primary-link {
         display: inline-block;
@@ -106,6 +196,16 @@
         border-radius: 20px;
         padding: 24px;
         box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      }
+
+      /* More specific rule to style the navbar even though it also has .section-card */
+      .section-card.nav-bar {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+          url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1400&q=80");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
       }
       .section-heading h2 {
         margin: 0 0 16px;
@@ -213,7 +313,7 @@
         return (
           <nav className="section-card nav-bar">
             <div>
-              <strong>Pathiyaar Library</strong>
+              <strong className="nav-title">പതിയാർ ഗ്രന്ഥാലയം</strong>
             </div>
             <div className="nav-links">
               {["home", "about", "contact"].map((page) => (
@@ -235,9 +335,10 @@
         return (
           <>
             <header className="hero">
-              <div className="hero-content">
-                <p className="eyebrow">Pathiyaar Library</p>
-                <h1>Discover calm, knowledge, and stories in one place.</h1>
+              <div>
+                <p className="title-text">
+                  Discover calm, knowledge, and stories in one place.
+                </p>
                 <p className="hero-text">
                   A peaceful digital library experience for readers who enjoy
                   timeless books and thoughtful browsing.
@@ -282,13 +383,38 @@
         );
       }
 
+      function EventBanner() {
+        return (
+          <section className="event-banner section-card">
+            <div>
+              <div className="event-badge">
+                Upcoming Event: Live World Cup football screening
+              </div>
+
+              <p>
+                🔥 The stage is set for an epic clash! Join us as we watch
+                France 🇫🇷 vs Morocco 🇲🇦 in the FIFA World Cup 2026 Quarterfinal.
+                Bring your passion, wear your team’s colors, and let’s
+                experience every goal, save, and celebration together!
+              </p>
+              <div className="event-note">
+                <strong>Time:</strong> July 10 - 12:30 AM onwards.
+              </div>
+              <div className="event-note">
+                <strong>Location:</strong> Near Library
+              </div>
+            </div>
+          </section>
+        );
+      }
+
       function AboutPage() {
         return (
           <section className="section-card">
             <p className="eyebrow">About the Library</p>
             <h2>Built for readers who love simplicity.</h2>
             <p>
-              Pathiyaar Library is a calm, static library website designed to
+              പതിയാർ ഗ്രന്ഥാലയം is a calm, static library website designed to
               highlight curated books, thoughtful categories, and an inviting
               browsing experience.
             </p>
@@ -304,9 +430,13 @@
         return (
           <section className="section-card">
             <p className="eyebrow">Contact</p>
-            <h2>Visit or write to us</h2>
-            <p>123 Reading Street, Colombo 07</p>
-            <p>Email: hello@pathiyaarlibrary.com</p>
+            <h1>Visit us</h1>
+            <div className="address">
+              <p>Pathiyaar Granthalayam</p>
+              <p>Chemmarathur (PO)</p>
+              <p>Vadakara</p>
+              <p> 673104</p>
+            </div>
             <p>Phone: +94 77 123 4567</p>
           </section>
         );
@@ -324,9 +454,10 @@
         return (
           <div className="app-shell">
             <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+            <EventBanner />
             {renderPage()}
             <footer className="footer">
-              <p>© 2026 Pathiyaar Library. All rights reserved.</p>
+              <p>© 2026 പതിയാർ ഗ്രന്ഥാലയം. All rights reserved.</p>
             </footer>
           </div>
         );

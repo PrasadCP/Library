@@ -158,3 +158,64 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* Navbar styling for built site */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 28px 28px;
+  border-radius: 14px;
+  color: #fff;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-title,
+.nav-brand strong {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.nav-link {
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #fff;
+}
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+/* Ensure navbar overrides .section-card where applied */
+.section-card.nav-bar {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .nav-title,
+  .nav-brand strong {
+    font-size: 0.9rem;
+  }
+}

@@ -29,8 +29,7 @@ function HomePage() {
     <>
       <header className="hero">
         <div className="hero-content">
-          <p className="eyebrow">Pathiyaar Library</p>
-          <h1>Discover calm, knowledge, and stories in one place.</h1>
+          <h>Discover calm, knowledge, and stories in one place.</h>
           <p className="hero-text">
             A peaceful digital library experience for readers who enjoy timeless
             books and thoughtful browsing.

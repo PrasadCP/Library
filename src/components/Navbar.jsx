@@ -13,7 +13,11 @@ function Navbar({ currentPage, onNavigate }) {
     React.createElement(
       "div",
       { className: "nav-brand" },
-      React.createElement("strong", null, "Pathiyaar Library"),
+      React.createElement(
+        "strong",
+        { className: "nav-title" },
+        "പതിയാർ ഗ്രന്ഥാലയം",
+      ),
     ),
     React.createElement(
       "div",
