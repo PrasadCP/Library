@@ -1,5 +1,3 @@
-import React from "react";
-
 function Navbar({ currentPage, onNavigate }) {
   const links = [
     { id: "home", label: "Home" },
@@ -7,34 +5,24 @@ function Navbar({ currentPage, onNavigate }) {
     { id: "contact", label: "Contact" },
   ];
 
-  return React.createElement(
-    "nav",
-    { className: "section-card nav-bar" },
-    React.createElement(
-      "div",
-      { className: "nav-brand" },
-      React.createElement(
-        "strong",
-        { className: "nav-title" },
-        "പതിയാർ ഗ്രന്ഥാലയം",
-      ),
-    ),
-    React.createElement(
-      "div",
-      { className: "nav-links" },
-      links.map((link) =>
-        React.createElement(
-          "button",
-          {
-            key: link.id,
-            className: `nav-link${currentPage === link.id ? " active" : ""}`,
-            onClick: () => onNavigate(link.id),
-            type: "button",
-          },
-          link.label,
-        ),
-      ),
-    ),
+  return (
+    <nav className="section-card nav-bar">
+      <div className="nav-brand">
+        <strong className="nav-title">പതിയാർ ഗ്രന്ഥാലയം</strong>
+      </div>
+      <div className="nav-links">
+        {links.map((link) => (
+          <button
+            key={link.id}
+            type="button"
+            className={`nav-link${currentPage === link.id ? " active" : ""}`}
+            onClick={() => onNavigate(link.id)}
+          >
+            {link.label}
+          </button>
+        ))}
+      </div>
+    </nav>
   );
 }
 

@@ -1,11 +1,16 @@
 function ContactPage() {
   return (
     <section className="section-card contact-page">
-      <p className="eyebrow">Contact</p>
-      <h2>Visit us</h2>
-      <p>123 Reading Street, Colombo 07</p>
-      <p>Email: hello@pathiyaarlibrary.com</p>
-      <p>Phone: +94 77 123 4567</p>
+      <div className="section-heading">
+        <p className="eyebrow">Contact</p>
+        <h2>Visit Us</h2>
+      </div>
+      <div className="address">
+        <p>Pathiyaar Granthalayam</p>
+        <p>Chemmarathur (PO)</p>
+        <p>Vadakara, 673104</p>
+      </div>
+      <p>Phone: +91 94475 36269</p>
     </section>
   );
 }

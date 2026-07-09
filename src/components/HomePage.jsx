@@ -29,8 +29,10 @@ function HomePage() {
     <>
       <header className="hero">
         <div className="hero-content">
-          <h>Discover calm, knowledge, and stories in one place.</h>
-          <p className="hero-text">
+          <h1 className="title-text">
+            Connecting people through books, knowledge, and culture.
+          </h1>
+          <p>
             A peaceful digital library experience for readers who enjoy timeless
             books and thoughtful browsing.
           </p>
